@@ -140,7 +140,7 @@ function isURL(str) {
     const pattern = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/[^\s]*)?$/;
     return pattern.test(str);
 }
-    
+
 async function hideInfosPDF(req, res) {
     const { pdfURL, verticesURL, color='#000000', targets=[] } = req.body;
 
@@ -162,7 +162,7 @@ async function hideInfosPDF(req, res) {
         
         console.log('Redacted file saved to', data.fileName);
         // await PDFNet.shutdown(); // Ensure proper cleanup
-        res.status(200).send({ data });
+        res.status(200).send(data);
     } catch (error) {
         res.status(500).send({ error: error.message });
     }
