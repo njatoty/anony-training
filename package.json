@@ -1,0 +1,33 @@
+{
+  "name": "backend-auto-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "gen:audio": "node gen-audio.js",
+    "hide:pdf": "node hide-content-pdf.js",
+    "redact": "node pdf-redactor.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pdftron/pdfnet-node": "^11.1.0",
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "gtts": "^0.2.1",
+    "mongoose": "^8.9.3",
+    "nodemon": "^3.1.9",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
